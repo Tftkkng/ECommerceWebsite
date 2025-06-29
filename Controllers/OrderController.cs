@@ -99,9 +99,9 @@ namespace ECommerceWebsite.Controllers
                     Quantity = item.Quantity,
                     ImageUrl = item.Product.ImageUrl
                 }).ToList(),
-                ShippingAddress = user?.Address ?? "",
-                ShippingCity = user?.City ?? "",
-                ShippingPostalCode = user?.PostalCode ?? ""
+                ShippingAddress = user?.Address ?? string.Empty,
+                ShippingCity = user?.City ?? string.Empty,
+                ShippingPostalCode = user?.PostalCode ?? string.Empty
             };
 
             viewModel.TotalAmount = viewModel.CartItems.Sum(item => item.ProductPrice * item.Quantity);
@@ -151,9 +151,9 @@ namespace ECommerceWebsite.Controllers
                     UserId = userId,
                     TotalAmount = cartItems.Sum(item => (item.Product.DiscountedPrice ?? item.Product.Price) * item.Quantity),
                     Status = OrderStatus.Pending,
-                    ShippingAddress = model.ShippingAddress ?? "",
-                    ShippingCity = model.ShippingCity ?? "",
-                    ShippingPostalCode = model.ShippingPostalCode ?? "",
+                    ShippingAddress = model.ShippingAddress ?? string.Empty,
+                    ShippingCity = model.ShippingCity ?? string.Empty,
+                    ShippingPostalCode = model.ShippingPostalCode ?? string.Empty,
                     CreatedAt = DateTime.UtcNow
                 };
 

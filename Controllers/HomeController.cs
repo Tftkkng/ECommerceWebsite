@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using ECommerceWebsite.Models;
+using ECommerceWebsite.Models.ViewModels;
 
 namespace ECommerceWebsite.Controllers;
 

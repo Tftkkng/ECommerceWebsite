@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using ECommerceWebsite.Data;
 using ECommerceWebsite.Models.Entities;
 using X.PagedList;
+using X.PagedList.Extensions;
 
 namespace ECommerceWebsite.Controllers
 {

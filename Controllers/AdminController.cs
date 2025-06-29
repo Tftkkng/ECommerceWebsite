@@ -6,6 +6,7 @@ using ECommerceWebsite.Data;
 using ECommerceWebsite.Models.Entities;
 using ECommerceWebsite.Models.ViewModels;
 using X.PagedList;
+using X.PagedList.Extensions;
 
 namespace ECommerceWebsite.Controllers
 {
