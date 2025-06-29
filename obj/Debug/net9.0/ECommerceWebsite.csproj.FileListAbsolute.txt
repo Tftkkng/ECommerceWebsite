@@ -1,0 +1,11 @@
+C:\Users\stshi\Desktop\ECommerceWebsite\ECommerceWebsite\obj\Debug\net9.0\ECommerceWebsite.csproj.AssemblyReference.cache
+C:\Users\stshi\Desktop\ECommerceWebsite\ECommerceWebsite\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\stshi\Desktop\ECommerceWebsite\ECommerceWebsite\obj\Debug\net9.0\ECommerceWebsite.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stshi\Desktop\ECommerceWebsite\ECommerceWebsite\obj\Debug\net9.0\ECommerceWebsite.AssemblyInfoInputs.cache
+C:\Users\stshi\Desktop\ECommerceWebsite\ECommerceWebsite\obj\Debug\net9.0\ECommerceWebsite.AssemblyInfo.cs
+C:\Users\stshi\Desktop\ECommerceWebsite\ECommerceWebsite\obj\Debug\net9.0\ECommerceWebsite.csproj.CoreCompileInputs.cache
+C:\Users\stshi\Desktop\ECommerceWebsite\ECommerceWebsite\obj\Debug\net9.0\ECommerceWebsite.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\stshi\Desktop\ECommerceWebsite\ECommerceWebsite\obj\Debug\net9.0\ECommerceWebsite.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\stshi\Desktop\ECommerceWebsite\ECommerceWebsite\obj\Debug\net9.0\ECommerceWebsite.RazorAssemblyInfo.cache
+C:\Users\stshi\Desktop\ECommerceWebsite\ECommerceWebsite\obj\Debug\net9.0\ECommerceWebsite.RazorAssemblyInfo.cs
+C:\Users\stshi\Desktop\ECommerceWebsite\ECommerceWebsite\obj\Debug\net9.0\ECommerceWebsite.sourcelink.json
