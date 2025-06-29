@@ -1,0 +1,9 @@
+/home/runner/workspace/obj/Debug/net7.0/ECommerceWebsite.csproj.AssemblyReference.cache
+/home/runner/workspace/obj/Debug/net7.0/ECommerceWebsite.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/workspace/obj/Debug/net7.0/ECommerceWebsite.AssemblyInfoInputs.cache
+/home/runner/workspace/obj/Debug/net7.0/ECommerceWebsite.AssemblyInfo.cs
+/home/runner/workspace/obj/Debug/net7.0/ECommerceWebsite.csproj.CoreCompileInputs.cache
+/home/runner/workspace/obj/Debug/net7.0/ECommerceWebsite.MvcApplicationPartsAssemblyInfo.cs
+/home/runner/workspace/obj/Debug/net7.0/ECommerceWebsite.MvcApplicationPartsAssemblyInfo.cache
+/home/runner/workspace/obj/Debug/net7.0/ECommerceWebsite.RazorAssemblyInfo.cache
+/home/runner/workspace/obj/Debug/net7.0/ECommerceWebsite.RazorAssemblyInfo.cs
