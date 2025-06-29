@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 using ECommerceWebsite.Data;
 using ECommerceWebsite.Models.Entities;
 using ECommerceWebsite.Models.ViewModels;
@@ -64,6 +63,7 @@ namespace ECommerceWebsite.Controllers
         }
 
         // GET: Order/Checkout
+        [Authorize]
         public async Task<IActionResult> Checkout()
         {
             var userId = _userManager.GetUserId(User);
@@ -112,6 +112,7 @@ namespace ECommerceWebsite.Controllers
 
         // POST: Order/Checkout
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Checkout(CheckoutViewModel model)
         {
@@ -203,6 +204,7 @@ namespace ECommerceWebsite.Controllers
 
         // POST: Order/Cancel/5
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Cancel(int id)
         {
