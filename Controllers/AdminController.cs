@@ -102,7 +102,7 @@ namespace ECommerceWebsite.Controllers
                 product.CreatedAt = DateTime.UtcNow;
                 _context.Add(product);
                 await _context.SaveChangesAsync();
-                
+
                 TempData["Success"] = "商品已成功建立";
                 return RedirectToAction(nameof(Products));
             }
@@ -156,7 +156,7 @@ namespace ECommerceWebsite.Controllers
                     product.UpdatedAt = DateTime.UtcNow;
                     _context.Update(product);
                     await _context.SaveChangesAsync();
-                    
+
                     TempData["Success"] = "商品已成功更新";
                 }
                 catch (DbUpdateConcurrencyException)

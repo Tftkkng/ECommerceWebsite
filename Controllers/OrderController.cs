@@ -1,6 +1,5 @@
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ECommerceWebsite.Data;
 using ECommerceWebsite.Models.Entities;
@@ -67,7 +66,7 @@ namespace ECommerceWebsite.Controllers
         {
             var userId = _userManager.GetUserId(User);
             var user = await _userManager.GetUserAsync(User);
-            
+
             var cartItems = await _context.ShoppingCartItems
                 .Include(s => s.Product)
                 .Where(s => s.UserId == userId)
@@ -185,7 +184,7 @@ namespace ECommerceWebsite.Controllers
 
                 // 清空購物車
                 _context.ShoppingCartItems.RemoveRange(cartItems);
-                
+
                 await _context.SaveChangesAsync();
                 await transaction.CommitAsync();
 
@@ -246,8 +245,9 @@ namespace ECommerceWebsite.Controllers
             }
             catch (Exception)
             {
-                await transaction.RollbackAsync();
-                TempData["Error"] = "訂單取消失敗";
+                // 記錄錯誤
+                TempData["Error"] = "取消訂單時發生錯誤";
+                return RedirectToAction(nameof(Details), new { id });
             }
 
             return RedirectToAction(nameof(Details), new { id });
