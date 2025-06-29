@@ -1,3 +1,5 @@
+using ECommerceWebsite.Models.Entities;
+
 namespace ECommerceWebsite.Models.ViewModels
 {
     public class AdminDashboardViewModel
