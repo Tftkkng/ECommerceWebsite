@@ -150,10 +150,10 @@ namespace ECommerceWebsite.Controllers
                 {
                     UserId = userId,
                     TotalAmount = cartItems.Sum(item => (item.Product.DiscountedPrice ?? item.Product.Price) * item.Quantity),
-                    Status = "Pending",
-                    ShippingAddress = model.ShippingAddress,
-                    ShippingCity = model.ShippingCity,
-                    ShippingPostalCode = model.ShippingPostalCode,
+                    Status = OrderStatus.Pending,
+                    ShippingAddress = model.ShippingAddress ?? "",
+                    ShippingCity = model.ShippingCity ?? "",
+                    ShippingPostalCode = model.ShippingPostalCode ?? "",
                     CreatedAt = DateTime.UtcNow
                 };
 
@@ -216,7 +216,7 @@ namespace ECommerceWebsite.Controllers
                 return NotFound();
             }
 
-            if (order.Status != "Pending")
+            if (order.Status != OrderStatus.Pending)
             {
                 TempData["Error"] = "只能取消待處理的訂單";
                 return RedirectToAction(nameof(Details), new { id });
@@ -235,7 +235,7 @@ namespace ECommerceWebsite.Controllers
                     }
                 }
 
-                order.Status = "Cancelled";
+                order.Status = OrderStatus.Cancelled;
                 order.UpdatedAt = DateTime.UtcNow;
                 _context.Update(order);
 

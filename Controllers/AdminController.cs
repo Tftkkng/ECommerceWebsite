@@ -31,9 +31,9 @@ namespace ECommerceWebsite.Controllers
                 TotalProducts = await _context.Products.CountAsync(),
                 TotalOrders = await _context.Orders.CountAsync(),
                 TotalUsers = await _userManager.Users.CountAsync(),
-                PendingOrders = await _context.Orders.CountAsync(o => o.Status == "Pending"),
+                PendingOrders = await _context.Orders.CountAsync(o => o.Status == OrderStatus.Pending),
                 TotalRevenue = await _context.Orders
-                    .Where(o => o.Status == "Completed")
+                    .Where(o => o.Status == OrderStatus.Delivered)
                     .SumAsync(o => o.TotalAmount),
                 RecentOrders = await _context.Orders
                     .Include(o => o.User)
@@ -210,7 +210,10 @@ namespace ECommerceWebsite.Controllers
 
             if (!string.IsNullOrEmpty(status))
             {
-                orders = orders.Where(o => o.Status == status);
+                if (Enum.TryParse<OrderStatus>(status, out var orderStatus))
+                {
+                    orders = orders.Where(o => o.Status == orderStatus);
+                }
             }
 
             if (startDate.HasValue)
@@ -269,12 +272,17 @@ namespace ECommerceWebsite.Controllers
                 return Json(new { success = false, message = "訂單不存在" });
             }
 
-            order.Status = status;
-            order.UpdatedAt = DateTime.UtcNow;
-            _context.Update(order);
-            await _context.SaveChangesAsync();
+            if (Enum.TryParse<OrderStatus>(status, out var orderStatus))
+            {
+                order.Status = orderStatus;
+                order.UpdatedAt = DateTime.UtcNow;
+                _context.Update(order);
+                await _context.SaveChangesAsync();
 
-            return Json(new { success = true, message = "訂單狀態已更新" });
+                return Json(new { success = true, message = "訂單狀態已更新" });
+            }
+
+            return Json(new { success = false, message = "無效的訂單狀態" });
         }
 
         #endregion
