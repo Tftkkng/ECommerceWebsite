@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cSRIG4CQDXlHwSLNoQCJ6SDZ0CiSvbDmIdnj1y8QH7mUXK14eRgsP+diTeR/Q6sTezRPJ9TAbnROXPxb8D9yhg==",
+  "dgSpecHash": "epb5BomZ6Pme/A3BUwysmyLkZTFycnYfNTGBkMJHN511+OXY0r1OfOKsU82D2+FUzJm0k0B0czQotKjsiJ3fUQ==",
   "success": true,
   "projectFilePath": "/home/runner/workspace/ECommerceWebsite.csproj",
   "expectedPackageFiles": [
@@ -72,7 +72,9 @@
     "/home/runner/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
     "/home/runner/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512",
     "/home/runner/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "/home/runner/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512"
+    "/home/runner/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512",
+    "/home/runner/.nuget/packages/x.pagedlist/10.5.7/x.pagedlist.10.5.7.nupkg.sha512",
+    "/home/runner/.nuget/packages/x.pagedlist.mvc.core/10.5.7/x.pagedlist.mvc.core.10.5.7.nupkg.sha512"
   ],
   "logs": []
 }
