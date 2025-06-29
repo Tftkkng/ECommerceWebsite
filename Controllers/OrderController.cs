@@ -6,6 +6,7 @@ using ECommerceWebsite.Data;
 using ECommerceWebsite.Models.Entities;
 using ECommerceWebsite.Models.ViewModels;
 using X.PagedList;
+using X.PagedList.Extensions;
 
 namespace ECommerceWebsite.Controllers
 {
@@ -192,7 +193,7 @@ namespace ECommerceWebsite.Controllers
                 TempData["Success"] = "訂單已成功建立";
                 return RedirectToAction(nameof(Details), new { id = order.Id });
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 await transaction.RollbackAsync();
                 TempData["Error"] = "訂單建立失敗，請稍後再試";
